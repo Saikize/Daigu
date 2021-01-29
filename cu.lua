@@ -191,7 +191,7 @@ local bosses = {
     };
 };
 
-
+--[[
 local function getClosestMob()
     local distance, mob = math.huge;
     for i, v in next, workspace.Mobs:GetChildren() do
@@ -216,6 +216,7 @@ local function getClosestMob()
 
     return mob;
 end;
+--]]
 
 local oldDelay = getrenv().delay;
 getrenv().delay = function(...)
