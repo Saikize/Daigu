@@ -1,7 +1,7 @@
 --[[
     Swordburst 2 GUI
 
-    By Spencer#0003 (Just modified floor 5 mobs to farm)
+    By Spencer#0003
 
     Since creating this script, I've noticed that I've attracted the attention of a fucking retard named Wally.
 
@@ -74,6 +74,11 @@ local mobs = {
     };
 
     [580239979] = {
+        "Angry Cactus";
+        "Desert Vulture";
+        "Girdled Lizard";
+        "Giant Centipede";
+        "Sand Scorpion";
     };
 
     [582198062] = {
@@ -160,7 +165,6 @@ local bosses = {
     };
     
     [582198062] = {
-        "Frogazoid";
         "Smashroom";
     };
 
@@ -191,7 +195,7 @@ local bosses = {
     };
 };
 
---[[
+
 local function getClosestMob()
     local distance, mob = math.huge;
     for i, v in next, workspace.Mobs:GetChildren() do
@@ -216,7 +220,6 @@ local function getClosestMob()
 
     return mob;
 end;
---]]
 
 local oldDelay = getrenv().delay;
 getrenv().delay = function(...)
